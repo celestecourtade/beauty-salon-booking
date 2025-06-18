@@ -1,11 +1,289 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Prices from '../components/Prices.astro';
+import "../css/global.css";
+import "../css/index.css";
 ---
-
 <Layout>
-	<Welcome />
-</Layout>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salón de Belleza | Landing Page</title>
+</head>
+
+<body>
+	<section class="showcase">
+  <img src="/img/showcase.jpg" alt="Imagen del salón" class="showcase__bg" />
+  <div class="hero__content">
+    <h1 class="hero__title">Hair</h1>
+    <h2 class="hero__subtitle">STYLE</h2>
+    <p class="hero__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere nobis quam!<br />
+      Voluptatum facere laborum molestiae impedit eaque illo beatae?
+    </p>
+    <a href="#leer-mas" class="hero__button">Leer más</a>
+  </div>
+</section>
+
+
+	  <section id="Servicios" class="cards">
+		<div class="cards__header">
+		  <h2 class="cards__section-title">Services</h2>
+		  <p class="cards__section-subtitle">Nuestros servicios más populares</p>
+		</div>
+	  
+		<div class="cards__item">
+		  <img src="/img/Card1.jpg" alt="Make Up" class="cards__image" />
+		  <div class="cards__content">
+			<h2 class="cards__title">Make Up</h2>
+			<h3 class="cards__subtitle">SALON</h3>
+			<p class="cards__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, vero dolore.</p>
+			<a href="#" class="cards__button">Cotiza por WhatsApp</a>
+		  </div>
+		</div>
+	  
+		<div class="cards__item card--destacada">
+		  <img src="/img/card2.jpg" alt="Beauty" class="cards__image" />
+		  <div class="cards__content">
+			<h2 class="cards__title">Beauty</h2>
+			<h3 class="cards__subtitle">SALON</h3>
+			<p class="cards__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquid commodi.</p>
+			<a href="#" class="cards__button">Cotiza por WhatsApp</a>
+		  </div>
+		</div>
+	  
+		<div class="cards__item">
+		  <img src="/img/Card1.jpg" alt="Facial" class="cards__image" />
+		  <div class="cards__content">
+			<h2 class="cards__title">Facial</h2>
+			<h3 class="cards__subtitle">SALON</h3>
+			<p class="cards__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, vero dolore.</p>
+			<a href="#" class="cards__button">Cotiza por WhatsApp</a>
+		  </div>
+		</div>
+	  </section>
+	  
+	  
+
+  
+  <!-- Sección Promocional con Imagen -->
+  <section class="promo">
+	<div class="promo__background">
+	  <img src="/img/fondo (1).jpg" style="width: 85rem;" alt="Fondo promocional" class="promo__image" />
+	  <div class="promo__overlay">
+		<div class="promo__content">
+		  <h2 class="promo__title">Agenda tu visita por WhatsApp</h2>
+		  <h3 class="promo__discount">SALE 10% OFF</h3>
+		  <p class="promo__text">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, corporis nobis.
+		  </p>
+		  <a href="#" class="promo__button">¡Envíanos un mensaje y agenda tu cita!</a>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <!-- Sección Informativa -->
+  <section id="Nosotros"  class="info">
+	<div class="info__image-container">
+	  <img src="/img/4.jpg" alt="Imagen bienvenida" class="info__image" />
+	</div>
+	<div class="info__text">
+	  <div class="info__content">
+		<h2 class="info__welcome">Welcome </h2>
+		<h3 class="info__salon">SALON BEAUTY</h3>
+		<p class="info__description">
+		  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore error dignissimos.
+		</p>
+	  </div>
+	</div>
+  </section>
+
+  <section class="contenedor-uno">
+	<div class="contenedor-uno__col contenedor-uno__col--left">
+	  <!-- Contenido para la izquierda -->
+	  <h2 class="contenedor-uno__title contenedor-uno__title--primary">Services</h2>
+	  <h2 class="contenedor-uno__title contenedor-uno__title--secondary">SALON BEAUTY</h2>
+	</div>
+	<div class="contenedor-uno__col contenedor-uno__col--right">
+	  <!-- Contenido para la derecha -->
+	  <p class="contenedor-uno__text contenedor-uno__text--dark-blue">
+		Texto más extenso que irá en la columna derecha, y puede ocupar varias líneas según sea necesario.
+		Este es el lugar donde puedes agregar más contenido.
+	  </p>      
+	  <p class="contenedor-uno__text">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, maxime aliquam sapiente nostrum
+		tenetur explicabo cupiditate dolorum repudiandae omnis minima?
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum odio libero alias dolorum magni porro
+		perspiciatis totam sint praesentium animi.
+	  </p>    
+	</div>
+  </section>
+  
+  <!-- DESCRIPCIÓN DE LOS SERVICIOS -->
+  <section class="servicios">
+	<div class="servicios__item">
+	  <i class="fa-solid fa-scissors servicios__icon circle-icon"></i>
+	  <p class="servicios__title servicios__title--blue">Lorem ipsum dolor sit amet consectetur</p>
+	  <p class="servicios__description servicios__description--gray">
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+		Modi accusantium blanditiis labore aperiam et eius iusto,
+		exercitationem quidem.
+	  </p>
+	</div>
+	<div class="servicios__item">
+	  <i class="fa-solid fa-eye servicios__icon circle-icon"></i>
+	  <p class="servicios__title servicios__title--blue">Lorem ipsum dolor sit amet consectetur</p>
+	  <p class="servicios__description servicios__description--gray">
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+		Modi accusantium blanditiis labore aperiam et eius iusto,
+		exercitationem quidem.
+	  </p>
+	</div>
+	<div class="servicios__item">
+	  <i class="fa-solid fa-person-dress servicios__icon circle-icon"></i>
+	  <p class="servicios__title servicios__title--blue">Lorem ipsum dolor sit amet consectetur</p>
+	  <p class="servicios__description servicios__description--gray">
+		Modi accusantium blanditiis labore aperiam et eius iusto,
+		exercitationem quidem.
+	  </p>
+	</div>
+	<div class="servicios__item">
+	  <i class="fa-solid fa-feather servicios__icon circle-icon"></i>
+	  <p class="servicios__title servicios__title--blue">Lorem ipsum dolor sit amet consectetur</p>
+	  <p class="servicios__description servicios__description--gray">
+		Modi accusantium blanditiis labore aperiam et eius iusto,
+		exercitationem quidem.
+	  </p>
+	</div>
+  </section>
+  
+
+  
+  <section aria-label="Galería de imágenes" class="gallery">
+	<figure class="gallery__item">
+	  <img src="img/galeria1.jpg" alt="Descripción de la imagen 1" class="gallery__image" />
+	</figure>
+	<figure class="gallery__item">
+	  <img src="img/galeria2.jpg" alt="Descripción de la imagen 2" class="gallery__image" />
+	</figure>
+	<figure class="gallery__item">
+	  <img src="img/galeria3.jpg" alt="Descripción de la imagen 3" class="gallery__image" />
+	</figure>
+	<figure class="gallery__item">
+	  <img src="img/galeria4.jpg" alt="Descripción de la imagen 4" class="gallery__image" />
+	</figure>
+	<figure class="gallery__item">
+	  <img src="img/galeria5.jpg" alt="Descripción de la imagen 5" class="gallery__image" />
+	</figure>
+	<figure class="gallery__item">
+	  <img src="img/galeria6.jpg" alt="Descripción de la imagen 6" class="gallery__image" />
+	</figure>
+	<figure class="gallery__item">
+	  <img src="img/galeria7.jpg" alt="Descripción de la imagen 7" class="gallery__image" />
+	</figure>
+	<figure class="gallery__item">
+	  <img src="img/galeria8.jpg" alt="Descripción de la imagen 8" class="gallery__image" />
+	</figure>
+  </section>
+  
+
+  <Prices />
+
+  <!-- BANNER -->
+<section>
+	<div class="card text-bg-dark">
+	  <img src="img/portadados.jpg" class="card-img" alt="Imagen de portada">
+	  <div class="card-img-overlay">
+		<h2 class="clase-titulo">Titulo</h2>
+		<h2 class="clase-subtitulo">SUBTITULO</h2>
+		<p>
+		  Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+		  Expedita earum esse voluptatum eveniet hic maiores eius ab
+		  tempora officiis voluptas!
+		</p>
+		<a href="#" class="btn btn-primary">Go somewhere</a>
+	  </div>
+	</div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+<section id="testimonials">
+	<div class="testimonial">
+	  <div class="testimonial__header">
+		<h2 class="testimonial__subtitle">Recommended by our customers.</h2>
+		<h2 class="testimonial__title">TESTIMONIALS</h2>
+	  </div>
+	  <div class="testimonial__group">
+		<div class="testimonial__item">
+		  <img src="img/testimonio.png" style="width: 10rem;" alt="Testimonial photo 1" />
+		  <div class="testimonial__content">
+			<p>Lorem ipsum, dolor sit amet consectetu</p>
+			<p class="testimonial__date">3 months ago</p>
+		  </div>
+		</div>
+		<div class="testimonial__item">
+		  <img src="img/testimonio.png" style="width: 10rem;" alt="Testimonial photo 2" />
+		  <div class="testimonial__content">
+			<p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.</p>
+			<p class="testimonial__date">6 months ago</p>
+		  </div>
+		</div>
+		<div class="testimonial__item">
+		  <img src="img/testimonio.png" style="width: 10rem;" alt="Testimonial photo 3" />
+		  <div class="testimonial__content">
+			<p>Suspendisse feugiat. Praesent nec erat convallis.</p>
+			<p class="testimonial__date">1 year ago</p>
+		  </div>
+		</div>
+		<div class="testimonial__item">
+		  <img src="img/testimonio.png" style="width: 10rem;" alt="Testimonial photo 4" />
+		  <div class="testimonial__content">
+			<p>Phasellus consequat. Morbi mattis ullamcorper velit. Aenean.</p>
+			<p class="testimonial__date">2 years ago</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  
+ 
+
+  <!-- CONTACTO Y MAPA -->
+<section id="Contacto" class="contacto-section">
+  <div class="contacto-section__info">
+    <div class="contacto-section__item">
+      <i class="fa-solid fa-location-dot contact-icono"></i>
+      <h3 class="contacto-section__title">Dirección</h3>
+      <p class="contacto-section__text">123 Calle Principal, Ciudad, País</p>
+    </div>
+    <div class="contacto-section__item">
+      <i class="fa-solid fa-phone contact-icono"></i>
+      <h3 class="contacto-section__title">Teléfono</h3>
+      <p class="contacto-section__text">+123 456 7890</p>
+    </div>
+    <div class="contacto-section__item">
+      <i class="fa-solid fa-clock contact-icono"></i>
+      <h3 class="contacto-section__title">Horario</h3>
+      <p class="contacto-section__text">9am a 20pm</p>
+    </div>
+  </div>
+
+  <div class="contacto-section__mapa">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127185.81841447646!2d-74.00711885867463!3d40.712783748049375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25901d6d63b07%3A0xbb2b9493d19531c5!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2suk!4v1631129958901!5m2!1sen!2suk"
+      style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+ 
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
+  
+ </Layout> 
+  

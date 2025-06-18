@@ -1,0 +1,210 @@
+---
+// Datos
+const servicios = [
+  {
+    id: "face",
+    title: "Face",
+    price: "$45",
+    features: [
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit."
+    ],
+  },
+  {
+    id: "makeup",
+    title: "Make Up",
+    price: "$45",
+    features: [
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit."
+    ],
+  },
+  {
+    id: "spa",
+    title: "Spa",
+    price: "$45",
+    features: [
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit.",
+      "Lorem ipsum dolor sit."
+    ],
+  },
+];
+---
+
+<section id="Sale" aria-label="Lista de precios y servicios" class="prices">
+  <div class="prices__container">
+    <header class="prices__header">
+      <h2 class="clase-nuestros">Our</h2>
+      <h2 class="clase-servicio">Prices</h2>
+    </header>
+    <div class="prices__list">
+      {
+        servicios.map((servicio) => (
+          <article id={servicio.id} class="price-item" key={servicio.id}>
+            <h3 class="price-item__title makeup">{servicio.title}</h3>
+            <p class="price-item__price precios">SALE {servicio.price}</p>
+            <ul class="price-item__features">
+              {
+                servicio.features.map((feature, index) => (
+                  <li class="icono-texto" key={index}>
+                    <i class="fa-solid fa-circle price-item__icon circle-icono" aria-hidden="true"></i>
+                    <span class="price-item__text">{feature}</span>
+                  </li>
+                ))
+              }
+            </ul>
+            <a href="#" class="btn btn-primary" aria-label={`Contactar por WhatsApp servicio ${servicio.title}`}>WhatsApp</a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .prices__container {
+    width: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+}
+
+.prices__header {
+  padding-top: 5rem;
+  padding-right: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.clase-nuestros {
+   font-family: var(--font-decorative);
+  color: var(--color-decorative); 
+  font-size: 4rem;
+}
+
+
+/* Lista de precios: filas con 3 columnas */
+.prices__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  /* para que en pantallas pequeñas baje a 1 o 2 columnas */
+}
+
+
+
+/* Estilo de cada item */
+.price-item {
+  background-color: #f9f9f9;
+  padding: 4.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.15rem 0.5rem rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Título y precio */
+.price-item__title {
+  font-size: 3rem;
+  margin: 0 0 0.5rem;
+}
+.clase-servicio {
+
+   font-size: 4rem;
+}
+
+
+.price-item__price {
+  margin: 0 0 1rem;
+  color: #5e5e5e; /* rojo suave */
+}
+
+/* Estilo base */
+.price-item {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover con movimiento */
+.price-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+
+
+/* Lista de características */
+.price-item__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+/* Cada feature con ícono círculo y texto */
+.icono-texto {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.price-item__icon {
+  color: #c2185b;
+  margin-right: 0.75rem;
+  font-size: 0.75rem;
+}
+
+/* Botón */
+.btn-primary    {
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: #c2185b;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #a01349;
+    transform: scale(1.05);
+  }
+  
+/* Responsive para pantallas pequeñas */
+@media (max-width: 900px) {
+  .prices__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .prices__list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

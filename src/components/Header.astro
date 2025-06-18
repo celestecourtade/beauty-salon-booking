@@ -1,0 +1,129 @@
+---
+
+---
+
+<header>
+    <div class="top-bar">
+      <p class="top-bar-telefono">Teléfono: +123 456 7890</p>
+    </div>
+  
+    <nav class="nav-main">
+      <div class="nav-logo">Beauty Salon</div>
+      <div class="nav-menu">
+        <a href="#Servicios" class="nav-link">Servicios</a>
+        <a href="#Nosotros" class="nav-link">Nosotros</a>
+        <a href="#Sale" class="nav-link">Sale</a>
+        <a href="#Testimonio" class="nav-link">Testimonios</a>
+        <a href="#Contacto" class="nav-link">Contacto</a>
+      </div>
+      <button class="btn-turnos" type="button">Turnos</button>
+    </nav>
+  </header>
+  
+
+  <style>
+    /* Barra superior */
+    .top-bar {
+      background-color: #000000;
+      padding: 0.5rem 2rem;
+      text-align: right;
+    }
+  
+    .top-bar-telefono {
+      color: white;
+      font-family:  var(--font-paragraph);
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  
+    /* Nav principal */
+    .nav-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid var(--color-primary);
+      font-family: var(--font-archivo-black);
+    }
+  
+    .nav-logo {
+      font-size: 2rem;
+      font-family: var(--font-decorative);
+      color: var(--color-decorative);
+      font-weight: bold;
+      user-select: none;
+    }
+  
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+    }
+  
+/* Nav principal */
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #222A3E; /* color oscuro en lugar de var(--color-primary) */
+  font-family: var(--font-archivo-black);
+}
+
+/* Links nav */
+.nav-link {
+  color: #222A3E; /* color oscuro para texto */
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 0.2rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c2185b; /* color decorativo para línea */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #c2185b; /* color decorativo para texto al hover */
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+    .nav-link:hover::after,
+    .nav-link:focus::after {
+      width: 100%;
+    }
+  
+    /* Botón turnos */
+    .btn-turnos {
+      background-color: #c2185b;
+      color: white;
+      font-weight: 700;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 0;
+      transition: background-color 0.3s ease;
+    }
+  
+    .btn-turnos:hover,
+    .btn-turnos:focus {
+      background-color: #a01349;
+    }
+
+  </style>

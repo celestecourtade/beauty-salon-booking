@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+
+/* VARIABLES GLOBALES */
+:root {
+  --font-decorative: 'Great Vibes', cursive;
+  --font-title: 'Archivo Black', sans-serif;
+  --font-paragraph: 'Antic Slab', serif;
+  --color-decorative: #c2185b;
+  --color-title: #222A3E;
+}
+
+p {
+  font-family: var(--font-paragraph);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+html, 
+body  {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+
+
+  }
+
